@@ -2,15 +2,15 @@
 ### 1、今天遇到做系统压力测试的时候，系统报了一个错误
 ```
 OERR: ORA-12519 TNS:no appropriate service handler found
-![image](https://github.com/xxlaila/work/blob/master/img/ORA-12519-error.png)
 ```
+![image](https://github.com/xxlaila/work/blob/master/img/ORA-12519-error.png)
 ### 2、在网上搜索了一下oralc的错误信息ORA-12519，解决办法挺多的，这里记录一下
 ### 3、登陆oracle的服务器，在登陆oracle数据库
 sqlplus "/as sysdba"
 ### 4、首先检查process和session的使用情况
-```
 ![image](https://github.com/xxlaila/work/blob/master/img/parameter_%20processes_1.png)
 ![image](https://github.com/xxlaila/work/blob/master/img/parameter_%20session_1.png)
+```
 这里可以看到process几乎已经满了
 ```
 ### 5、修改oracle的process和session值
@@ -36,6 +36,4 @@ Redo Buffers                7958528 bytes
 数据库已经打开。
 ```
 ### 7、查看并验证
-```
 ![image](https://github.com/xxlaila/work/blob/master/img/W.png)
-```
