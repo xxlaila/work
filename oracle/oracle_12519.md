@@ -1,6 +1,7 @@
 ## oracle ORA-12519错误解决 
+### 1、今天遇到做系统压力测试的时候，系统报了一个错误
 ```
-1、今天遇到做系统压力测试的时候，系统包了一个错误，OERR: ORA-12519 TNS:no appropriate service handler found
+OERR: ORA-12519 TNS:no appropriate service handler found
 ![image](https://github.com/xxlaila/work/blob/master/img/ORA-12519-error.png)
 ```
 ### 2、在网上搜索了一下oralc的错误信息ORA-12519，解决办法挺多的，这里记录一下
