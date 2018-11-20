@@ -6,7 +6,9 @@ OERR: ORA-12519 TNS:no appropriate service handler found
 ![image](https://github.com/xxlaila/work/blob/master/img/ORA-12519-error.png)
 ### 2、在网上搜索了一下oralc的错误信息ORA-12519，解决办法挺多的，这里记录一下
 ### 3、登陆oracle的服务器，在登陆oracle数据库
+```
 sqlplus "/as sysdba"
+```
 ### 4、首先检查process和session的使用情况
 ![image](https://github.com/xxlaila/work/blob/master/img/parameter_%20processes_1.png)
 ![image](https://github.com/xxlaila/work/blob/master/img/parameter_%20session_1.png)
