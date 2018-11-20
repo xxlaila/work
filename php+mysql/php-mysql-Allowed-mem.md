@@ -3,7 +3,7 @@
 网站之前是正常的，某一天突然访问的时候提示：Allowed memory size of 268435456 bytes exhausted(tried to allocate 4 bytes)
 这个错误就是一个网站一个简单的登陆就报这个错，本质上是代码问题，但是之前用的很好，没动过这个东西，不应该出现
 ```
-![image](https://github.com/xxlaila/work/blob/master/img/Allowed-memory.png)
+![image](https://github.com/xxlaila/work/blob/master/img/Allowed-memory.jpg)
 ### 1、网上的解决办法
 ####1.1 修改php.ini文件的参数
 ```
