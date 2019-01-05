@@ -2,16 +2,23 @@
 
 ## 安装mysql 5.7.24 版本
 ### 安装mysql
+```
 # rpm -ivh http://dev.mysql.com/get/mysql57-community-release-el7-7.noarch.rpm
 # yum list |grep "mysql"
 # yum install -y mysql-community-server
+```
 - 启动mysql
+```
 # systemctl start mysqld.service
+# systemctl enable mysqld.service
+```
 - 修改myslq密码
+```
 # grep 'temporary password' /var/log/mysqld.log
 mysql> SET PASSWORD = PASSWORD('news password');
 mysql> ALTER USER 'root'@'localhost' PASSWORD EXPIRE NEVER;
 mysql> flush privileges;
+```
 ### 修改mysql的配置文件，用于支持confluence的最低安装需求
 - 在my.cnf配置文件[mysqld]里面添加下面配置参数
 - 将默认字符集指定为UTF-8
@@ -41,9 +48,11 @@ binlog_format=row
 ```
 - 重启mysql数据库
 ### 为Confluence创建数据库用户和数据库
+```
 mysql> CREATE DATABASE confluence CHARACTER SET utf8 COLLATE utf8_bin;
-mysql> GRANT ALL PRIVILEGES ON confluence.* TO confluence@'loalhost' IDENTIFIED BY 'KJHd3467sjj%s'
+mysql> GRANT ALL PRIVILEGES ON confluence.* TO confluence@'localhost' IDENTIFIED BY 'password'
 mysql> flush privileges;
+```
 ## 安装Confluence
 - 下载Confluence，这里下载bin文件进行安装，下载地址：https://www.atlassian.com/software/confluence/download-archives
 - 下载的版本为atlassian-confluence-6.12.2-x64.bin,包有点大，需要等待
