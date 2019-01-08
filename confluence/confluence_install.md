@@ -46,6 +46,10 @@ transaction-isolation=READ-COMMITTED
 ```
 binlog_format=row
 ```
+- 确保sql_mode参数未指定NO_AUTO_VALUE_ON_ZERO
+```
+sql_mode = "ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION"
+```
 - 重启mysql数据库
 ### 为Confluence创建数据库用户和数据库
 ```
@@ -199,3 +203,10 @@ $ java -jar confluence_keygen.jar
 ```
 ![image](https://github.com/xxlaila/work/blob/master/img/EEB25C9704F4C76C30E1DF32A2E1EDE0.jpg)
 - 无限制，永久使用，爽
+
+- 启动，停止或重新启动 Confluence
+```
+$ sudo /etc/init.d/confluence start
+$ sudo /etc/init.d/confluence stop
+$ sudo /etc/init.d/confluence restart
+```
