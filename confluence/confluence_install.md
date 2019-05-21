@@ -142,6 +142,17 @@ Confluence 6.12.2 can be accessed at http://localhost:8090
 # systemctl enable nginx.service
 配置nginx的upstream这里将不再阐述
 ```
+### 接下来通过浏览器进行配置
+- 打开页面
+![image](https://github.com/xxlaila/work/blob/master/img/5DF0B5DCC39B66AC87133FB0260A6CD8.jpg)
+- 设置语言为中文和产品安装
+![image](https://github.com/xxlaila/work/blob/master/img/23095BDB546CAE356E8B04E252BCFC9E.jpg)
+- 生成授权码
+![image](https://github.com/xxlaila/work/blob/master/img/CB99372F30342EBABC1125510FBC50B9.jpg)
+```
+# /etc/init.d/confluence stop
+# /etc/init.d/confluence start
+```
 ### 下载mysql驱动
 ```
 # wget https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.47.zip
@@ -167,23 +178,15 @@ Confluence 6.12.2 can be accessed at http://localhost:8090
 - 把/opt/atlassian-extras-2.4.jar下载到本地
 - 本地启动Confluence破解器
 ```
-$ java -jar confluence_keygen.jar 
+$ java -jar confluence_keygen.jar
 ```
 - 点击.patch! 选择下载到本地的atlassian-extras-2.4.jar包，文件类型不变，点击打开，自动生产一个新的atlassian-extras-2.4.jar包
 ![image](https://github.com/xxlaila/work/blob/master/img/FA8682F205BB1655E20AAD392DF13417.jpg)
 - 把新生成的包上传到/opt/atlassian/confluence/confluence/WEB-INF/lib/目录下面，然后重启confluence
+- 把服务器id输入到server id，name项随便输入，名称不要过短，店家.gen!生成授权吗，然后把授权复制到confluence框里面
 ```
-# /etc/init.d/confluence stop
 # /etc/init.d/confluence start
 ```
-### 接下来通过浏览器进行配置
-- 打开页面
-![image](https://github.com/xxlaila/work/blob/master/img/5DF0B5DCC39B66AC87133FB0260A6CD8.jpg)
-- 设置语言为中文和产品安装
-![image](https://github.com/xxlaila/work/blob/master/img/23095BDB546CAE356E8B04E252BCFC9E.jpg)
-- 生成授权码
-![image](https://github.com/xxlaila/work/blob/master/img/CB99372F30342EBABC1125510FBC50B9.jpg)
-- 把服务器id输入到server id，name项随便输入，名称不要过短，店家.gen!生成授权吗，然后把授权复制到confluence框里面
 - 设置数据库
 ![image](https://github.com/xxlaila/work/blob/master/img/EFF70DEA9DFBCA88E24BE83BEE9DFFC8.jpg)
 ![image](https://github.com/xxlaila/work/blob/master/img/BF70624FCFA9E5ECFD4E121E02D08FD3.jpg)
