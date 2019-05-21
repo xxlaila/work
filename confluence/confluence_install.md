@@ -151,17 +151,6 @@ Confluence 6.12.2 can be accessed at http://localhost:8090
 ![image](https://github.com/xxlaila/work/blob/master/img/CB99372F30342EBABC1125510FBC50B9.jpg)
 ```
 # /etc/init.d/confluence stop
-# /etc/init.d/confluence start
-```
-### 下载mysql驱动
-```
-# wget https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.47.zip
-```
-- 完成后进行解压，并把mysql-connector-java-5.1.47-bin.jar 复制到lib目录下面
-```
-# /etc/init.d/confluence stop
-# cp mysql-connector-java-5.1.47-bin.jar /opt/atlassian/confluence/confluence/WEB-INF/lib
-# /etc/init.d/confluence start
 ```
 ### 破解Confluence
 - 在本地下载破解器
@@ -182,9 +171,16 @@ $ java -jar confluence_keygen.jar
 ```
 - 点击.patch! 选择下载到本地的atlassian-extras-2.4.jar包，文件类型不变，点击打开，自动生产一个新的atlassian-extras-2.4.jar包
 ![image](https://github.com/xxlaila/work/blob/master/img/FA8682F205BB1655E20AAD392DF13417.jpg)
-- 把新生成的包上传到/opt/atlassian/confluence/confluence/WEB-INF/lib/目录下面，然后重启confluence
 - 把服务器id输入到server id，name项随便输入，名称不要过短，店家.gen!生成授权吗，然后把授权复制到confluence框里面
+- 把新生成的包上传到/opt/atlassian/confluence/confluence/WEB-INF/lib/目录下面
 ```
+### 下载mysql驱动
+```
+# wget https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.47.zip
+```
+- 完成后进行解压，并把mysql-connector-java-5.1.47-bin.jar 复制到lib目录下面
+```
+# cp mysql-connector-java-5.1.47-bin.jar /opt/atlassian/confluence/confluence/WEB-INF/lib
 # /etc/init.d/confluence start
 ```
 - 设置数据库
@@ -206,10 +202,3 @@ $ java -jar confluence_keygen.jar
 ```
 ![image](https://github.com/xxlaila/work/blob/master/img/EEB25C9704F4C76C30E1DF32A2E1EDE0.jpg)
 - 无限制，永久使用，爽
-
-- 启动，停止或重新启动 Confluence
-```
-$ sudo /etc/init.d/confluence start
-$ sudo /etc/init.d/confluence stop
-$ sudo /etc/init.d/confluence restart
-```
