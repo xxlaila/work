@@ -133,7 +133,6 @@ Confluence 6.12.2 can be accessed at http://localhost:8090
 ```
 - 通过浏览器访问试一下
 ![images]
-
 ### 安装nginx 进行方向代理访问
 ```
 # rpm -Uvh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
@@ -173,5 +172,31 @@ $ java -jar confluence_keygen.jar
 ![image](https://github.com/xxlaila/work/blob/master/img/FA8682F205BB1655E20AAD392DF13417.jpg)
 - 把服务器id输入到server id，name项随便输入，名称不要过短，店家.gen!生成授权吗，然后把授权复制到confluence框里面
 - 把新生成的包上传到/opt/atlassian/confluence/confluence/WEB-INF/lib/目录下面
-```
 ### 下载mysql驱动
+```
+# wget https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.47.zip
+```
+- 完成后进行解压，并把mysql-connector-java-5.1.47-bin.jar 复制到lib目录下面
+```
+# cp mysql-connector-java-5.1.47-bin.jar /opt/atlassian/confluence/confluence/WEB-INF/lib
+# /etc/init.d/confluence start
+```
+- 设置数据库
+![image](https://github.com/xxlaila/work/blob/master/img/EFF70DEA9DFBCA88E24BE83BEE9DFFC8.jpg)
+![image](https://github.com/xxlaila/work/blob/master/img/BF70624FCFA9E5ECFD4E121E02D08FD3.jpg)
+- 这是完成以后进行测试，是否联通，在下一步（需要进行等待，后台在生成数据库）
+- 生成完成后，系统会跳转到另外一个页面，这里忘记截图,是进行数据导入、站点恢复等
+- 重新打开网址连接
+![image](https://github.com/xxlaila/work/blob/master/img/BEE317A48B4CEE0407638F47CDBDF31F.jpg)
+- 由于这里没有ladp和jira,所以选择在confluence中管理用户和组
+- 设置系统管理账户
+![image](https://github.com/xxlaila/work/blob/master/img/93FDD95874C661340531C27CC77298FD.jpg)
+![image](https://github.com/xxlaila/work/blob/master/img/6B1F3A2EBF1B3DAF1A962317AA59DC15.jpg)
+- 这里跳过个人头像设定,头像设定完成后会提示你新建一个空间
+![image](https://github.com/xxlaila/work/blob/master/img/FCE130BD8B121A290010FEA2C2342898.jpg)
+- 查看授权期限
+```
+设置——>一般设置——>管理——>授权细节
+```
+![image](https://github.com/xxlaila/work/blob/master/img/EEB25C9704F4C76C30E1DF32A2E1EDE0.jpg)
+- 无限制，永久使用，爽
