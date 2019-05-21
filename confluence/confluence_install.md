@@ -175,6 +175,3 @@ $ java -jar confluence_keygen.jar
 - 把新生成的包上传到/opt/atlassian/confluence/confluence/WEB-INF/lib/目录下面
 ```
 ### 下载mysql驱动
-```
-# wget https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.47.zip
-```
