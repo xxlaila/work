@@ -44,7 +44,7 @@ done
 function deploy()
 {
         group_vars=$(python /etc/ansible/dy_inventories/get_group_vars.py -p ${ProjectName} -e ${env}); echo $?
-        if [[ "${ProjectName}" =~ "kingxunlian.com" ]];then
+        if [[ "${ProjectName}" =~ "test.com" ]];then
                 sudo su - otoman -c "ansible-playbook -i /etc/ansible/inventories/${env}/ /etc/ansible/portal_app.yml -e \"project_name=${ProjectName}\""
         else
                 if [[ $? == 0 ]];then
